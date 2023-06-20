@@ -15,7 +15,7 @@ public class CreateAirlineData {
                 .baseUri("https://api.instantwebtools.net/v1/airlines")
                 .contentType(ContentType.JSON)
                 .body("{\n" +
-                        "    \"id\": 153179,\n" +
+                        "    \"id\": 153180,\n" +
                         "    \"name\": \"GRV Airways\",\n" +
                         "    \"country\": \"GRV\",\n" +
                         "    \"logo\": \"https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/sri_lanka.png\",\n" +
@@ -24,8 +24,8 @@ public class CreateAirlineData {
                         "    \"website\": \"www.srilankaairways.com\",\n" +
                         "    \"established\": \"1987\"\n" +
                         "}")
-               .log().all()
-                .post();
+                .post()
+                        .then().log().all().extract().response();
 
 
         Assert.assertEquals(response.statusCode(),200);
