@@ -30,8 +30,13 @@ public class createBookingwithBDD {
 
                 .when()
                     .post()
+
+        //Then  - Validate the response
+
                 .then()
-                        .statusCode(200);
+                        .statusCode(200)
+                        .log().all();
+
         //Then
 
     }

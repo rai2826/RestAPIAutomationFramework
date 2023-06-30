@@ -12,10 +12,11 @@ public class getBooking {
                     .log().all()
                     .baseUri("https://restful-booker.herokuapp.com/")
                     .basePath("booking/{id}")
-                    .pathParam("id",10)
+                    .pathParam("id",3609)
 
         //When - hit the request and get response
-                .get()
+                .when()
+                    .get()
         //Then - Validate the response
                 .then()
                     .statusCode(200)
